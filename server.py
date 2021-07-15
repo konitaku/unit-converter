@@ -6,7 +6,7 @@ from converter import convert
 import os
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "\xbaF\xf0by\xb7\xf5Q\x91\xfb\xd2\x824fN\xce\xaa\x1d\xb4F\xady\x12\xaf")
 
 
 class ConvertForm(FlaskForm):
