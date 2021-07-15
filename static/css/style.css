@@ -18,7 +18,10 @@ select {
     max-width: 45rem;
 }
 h1 {
-    margin: 0 auto 30px;
+    margin: 0 auto .25rem;
+}
+.sub-heading {
+    padding-bottom: 2rem;
 }
 a {
     color: #fff;
@@ -32,6 +35,17 @@ table {
 }
 td {
     padding: 5px;
+}
+.description {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto 2rem;
+    font-size: 0.8rem;
+}
+.description span {
+    font-size: 0.5rem;
+    display: inline-block;
+    margin-top: 1rem;
 }
 /* ---------------- コンバーターのアニメーション -------------------- */
 /* #converter {

@@ -1,6 +1,12 @@
 {% include "header.html" %}
 <main id="converter">
     <h1>Unit Converter</h1>
+    <p class="sub-heading">- 単位変換器 -</p>
+    <p class="description">
+        長さの単位を変換できます。<br>
+        対応している単位はメートル、マイル、ヤード、フィート、インチの５つです。<br>
+        <span>今後のアップデートで扱う単位を増やしていきます。多分。</span>
+    </p>
 
     <form action="{{ url_for('home') }}" method="post">
         {{ form.csrf_token }}
