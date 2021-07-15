@@ -10,7 +10,7 @@ app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 
 
 class ConvertForm(FlaskForm):
-    number = StringField(validators=[DataRequired()], render_kw={"placeholder": "数字を入力してください"})
+    number = StringField(validators=[DataRequired()], render_kw={"placeholder": "数字を入力"})
     unit_select1 = SelectField(
         choices=[("m", "メートル"), ("mile", "マイル"), ("yard", "ヤード"), ("feet", "フィート"), ("inch", "インチ")],
         validators=[DataRequired()]
@@ -26,7 +26,7 @@ def home():
     form = ConvertForm()
     result = 0
     if form.validate_on_submit():
-        result = convert(int(form.number.data), form.unit_select1.data, form.unit_select2.data)
+        result = convert(float(form.number.data), form.unit_select1.data, form.unit_select2.data)
 
         form = ConvertForm(
             number=form.number.data,

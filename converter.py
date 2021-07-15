@@ -1,7 +1,7 @@
 from decimal import Decimal, ROUND_HALF_UP
 
 
-def convert(num: int, init_unit: str, change_unit: str) -> int:
+def convert(num: float, init_unit: str, change_unit: str) -> int:
     result = 0
     if init_unit == "m":
         cv_rate = {
