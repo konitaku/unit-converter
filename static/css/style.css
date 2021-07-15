@@ -40,7 +40,7 @@ td {
     text-align: left;
     max-width: 400px;
     margin: 0 auto 2rem;
-    font-size: 0.8rem;
+    font-size: .8rem;
 }
 .description span {
     font-size: 0.5rem;
@@ -107,6 +107,9 @@ span.logo {
 }
 .convert_btn_box {
     padding: 2.5rem;
+}
+.result {
+    font-size: 1.2rem
 }
 /* -------------- Works Card ---------------- */
 .card {
