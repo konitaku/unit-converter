@@ -6,11 +6,11 @@ from converter import convert
 import os
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "\xbaF\xf0by\xb7\xf5Q\x91\xfb\xd2\x824fN\xce\xaa\x1d\xb4F\xady\x12\xaf")
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 
 
 class ConvertForm(FlaskForm):
-    number = StringField(validators=[DataRequired()], render_kw={"placeholder": "1"})
+    number = StringField(validators=[DataRequired()], render_kw={"placeholder": "数字を入力してください"})
     unit_select1 = SelectField(
         choices=[("m", "メートル"), ("mile", "マイル"), ("yard", "ヤード"), ("feet", "フィート"), ("inch", "インチ")],
         validators=[DataRequired()]
