@@ -1,0 +1,32 @@
+{% include "header.html" %}
+<main id="converter">
+    <h1>Unit Converter</h1>
+
+    <form action="{{ url_for('home') }}" method="post">
+        {{ form.csrf_token }}
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        {{ form.number }}
+                    </td>
+                    <td>
+                        {{ form.unit_select1 }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>{{ result }}</td>
+                    <td>
+                        {{ form.unit_select2 }}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="convert_btn_box">
+                        <input class="btn btn-light" type="submit" name="submit" value="変換する">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</main>
+{% include "footer.html" %}
